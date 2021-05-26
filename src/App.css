@@ -2,11 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -14,6 +9,7 @@
 }
 
 .App header {
+  position: relative;
   background-color: #282c34;
   height: 80px;
   display: flex;
@@ -37,36 +33,45 @@
   }
 }
 
-.kitty-grid {
-  display:grid;
+.cat-list {
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.kitty {
+.cat {
   border: 1px solid black;
-  border-radius :8px;
+  border-radius: 8px;
 }
 
-.kitty .name {
+.cat .name {
   display: block;
 }
 
-.kitty .price {
+.cat .price {
   display: block;
 }
 
-.kitty img {
+.cat img {
   display: block;
   max-width: 100px;
 }
 
-.kitty-cart {
+.cat-cart {
   display: flex;
   flex-direction: column;
 }
 
 @media (orientation: portrait) {
-  .kitty-grid {
+  .cat-list {
     grid-template-columns: 1fr;
   }
+}
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
 }
