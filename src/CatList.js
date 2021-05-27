@@ -2,6 +2,8 @@ import { useContext } from "react";
 import CartContext from "./CartContext.js";
 import { makeAddToCart } from "./update-cart.js";
 
+import formatter from "./currency-formatter.mjs";
+
 const CatList = () => {
   const { cats, updateCart, setModal } = useContext(CartContext);
   const rendered = [];
@@ -14,7 +16,7 @@ const CatList = () => {
         <button onClick={makeAddToCart(updateCart, cat, setModal)}>
           Add to Cart
         </button>{" "}
-        <span className="price">{price}</span>
+        <span className="price">{formatter.format(price)}</span>
       </div>
     );
   }

@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import CartContext from "./CartContext.js";
+
 import { makeRemoveFromCart } from "./update-cart.js";
+import formatter from "./currency-formatter.mjs";
 
 const CatCart = () => {
   const { cart, updateCart } = useContext(CartContext);
@@ -19,7 +21,7 @@ const CatCart = () => {
   return (
     <>
       <div className="cat-cart">{rendered}</div>
-      <div className="total">{total}</div>
+      <div className="total">{formatter.format(total)}</div>
     </>
   );
 };

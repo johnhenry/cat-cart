@@ -15,7 +15,7 @@ const Application = () => {
   return (
     <div className="App">
       <header>
-        Cat Cart{" "}
+        Cat Cart
         <button onClick={() => setModal(1)}>Cart ({cart.length})</button>
       </header>
       <CartContext.Provider value={{ cats, cart, modal, setModal, updateCart }}>
