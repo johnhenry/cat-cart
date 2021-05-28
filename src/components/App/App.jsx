@@ -19,7 +19,10 @@ const Application = () => {
       <header>
         <span className="attributions" onClick={() => setModal(3)}></span>
         <button className="open-cart" onClick={() => setModal(1)}>
-          <img src="https://img.icons8.com/material-sharp/24/000000/favorite-cart.png" />
+          <img
+            src="https://img.icons8.com/material-sharp/24/000000/favorite-cart.png"
+            alt="shopping cart"
+          />
           ({cart.length})
         </button>
       </header>
