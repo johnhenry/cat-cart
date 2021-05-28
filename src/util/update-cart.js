@@ -3,16 +3,10 @@ const finder =
   ({ id: id_ }) =>
     id === id_;
 
-export const makeAddToCart =
-  (updateCart, candidate, setModal, MAX = 3) =>
-  () =>
-    updateCart((cart) => {
-      if (cart.length >= MAX) {
-        setModal(2);
-        return cart;
-      }
-      return [...cart, candidate];
-    });
+export const makeAddToCart = (updateCart, candidate) => () =>
+  updateCart((cart) => {
+    return [...cart, candidate];
+  });
 
 export const makeRemoveFromCart = (updateCart, id) => () =>
   updateCart((cart) => {

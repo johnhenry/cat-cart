@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App.jsx";
 
-test("renders learn react link", () => {
+test("renders initial cart total", () => {
   render(<App />);
-  const linkElement = screen.getByText(/Cat Cart/i);
+  const linkElement = screen.getByText(/0/i);
   expect(linkElement).toBeInTheDocument();
 });
