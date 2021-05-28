@@ -1,22 +1,22 @@
 import { useContext } from "react";
 import CartContext from "./CartContext.js";
 import { makeAddToCart } from "../util/update-cart.js";
-
-import formatter from "../util/currency-formatter.mjs";
-
 const CatList = () => {
-  const { cats, updateCart, setModal } = useContext(CartContext);
+  const { cats, updateCart, setModal, cart } = useContext(CartContext);
   const rendered = [];
   for (const cat of cats) {
     const { id, name, image, price } = cat;
     rendered.push(
       <div className="cat" key={id}>
-        <span className="title">{name}</span>
         <img src={image} alt={`cat pic ${name}`}></img>
-        <button onClick={makeAddToCart(updateCart, cat, setModal)}>
-          Add to Cart
+        <span className="title">{name}</span>
+        <button
+          className="add-to-cart"
+          onClick={makeAddToCart(updateCart, cat, setModal)}
+          disabled={cart.includes(cat)}
+        >
+          <span className="price">{Number(price).toFixed(2)}</span>
         </button>
-        <span className="price">{formatter.format(price)}</span>
       </div>
     );
   }

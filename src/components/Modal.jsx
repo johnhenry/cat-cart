@@ -6,11 +6,14 @@ const Modal = ({ index, children }) => {
   return (
     <div
       className="modal"
-      style={{ display: modal && modal === index ? "block" : "none" }}
-      title="Click to close"
-      onClick={() => setModal(0)}
+      style={{ display: modal && modal === index ? "flex" : "none" }}
     >
-      {children}
+      <button
+        className="close-button"
+        onClick={() => setModal(0)}
+        title="Click to close"
+      ></button>
+      <div className="modal-content">{children}</div>
     </div>
   );
 };

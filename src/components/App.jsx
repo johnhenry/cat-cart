@@ -13,10 +13,16 @@ const Application = () => {
   useEffect(() => fetchData().then(setCats), []);
 
   return (
-    <div className="App">
+    <>
       <header>
         Cat Cart
-        <button onClick={() => setModal(1)}>Cart ({cart.length})</button>
+        <button className="open-cart" onClick={() => setModal(1)}>
+          <img src="https://img.icons8.com/material-sharp/24/000000/favorite-cart.png" />
+          ({cart.length})
+        </button>
+        <button className="open-cart" onClick={() => setModal(3)}>
+          attributions
+        </button>
       </header>
       <CartContext.Provider value={{ cats, cart, modal, setModal, updateCart }}>
         <CatList />
@@ -24,13 +30,28 @@ const Application = () => {
           <CatCart />
         </Modal>
         <Modal index={2}>
-          <div>Too Many of THAT Cat!</div>
+          <div className="message">
+            Sawwies!
+            <br />
+            No more than 3 cats can can be adopted.
+          </div>
         </Modal>
         <Modal index={3}>
-          <div>Too Many Cats!</div>
+          <div className="message">
+            <div>Shopping Cart Icon</div>
+            <div>
+              <a
+                href="https://icons8.com/icon/100405/favorite-cart"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Favorite Cart icon by Icons8
+              </a>
+            </div>
+          </div>
         </Modal>
       </CartContext.Provider>
-    </div>
+    </>
   );
 };
 

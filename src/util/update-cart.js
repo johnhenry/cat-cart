@@ -7,12 +7,8 @@ export const makeAddToCart =
   (updateCart, candidate, setModal, MAX = 3) =>
   () =>
     updateCart((cart) => {
-      if (cart.find(finder(candidate.id))) {
-        setModal(2);
-        return cart;
-      }
       if (cart.length >= MAX) {
-        setModal(3);
+        setModal(2);
         return cart;
       }
       return [...cart, candidate];
