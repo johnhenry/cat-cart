@@ -4,10 +4,11 @@
 
 ### Prerequisites
 
- - [node](https://nodejs.org)
- - [npm](https://npmjs.org) (This is generally comes alongside node).
+- [node](https://nodejs.org)
+- [npm](https://npmjs.org) (This is generally comes alongside node).
 
 ### Install dependencies
+
 ```sh
 npm install
 ```
