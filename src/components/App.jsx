@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import "./App.css";
-import CatList from "./CatList.js";
-import CatCart from "./CatCart.js";
-import Modal from "./Modal.js";
+// import "./App.css";
+import CatList from "./CatList.jsx";
+import CatCart from "./CatCart.jsx";
+import Modal from "./Modal.jsx";
 import CartContext from "./CartContext.js";
-import fetchData from "./fetch-data.js";
+import fetchData from "../util/fetch-data.js";
 
 const Application = () => {
   const [cats, setCats] = useState([]);

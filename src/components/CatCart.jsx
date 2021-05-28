@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import CartContext from "./CartContext.js";
 
-import { makeRemoveFromCart } from "./update-cart.js";
-import formatter from "./currency-formatter.mjs";
+import { makeRemoveFromCart } from "../util/update-cart.js";
+import formatter from "../util/currency-formatter.mjs";
 
 const CatCart = () => {
   const { cart, updateCart } = useContext(CartContext);
