@@ -1,0 +1,25 @@
+header {
+  position: relative;
+  background-color: #02050a;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 3rem;
+  color: white;
+}
+header::before {
+  content: "Cat Cart";
+}
+
+header .attributions {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+header .attributions::before {
+  content: "Cattributions";
+}
+
+header .open-cart > * {
+  vertical-align: middle;
+}

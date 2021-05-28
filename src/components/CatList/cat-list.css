@@ -1,0 +1,12 @@
+.cat-list {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (orientation: portrait) {
+  .cat-list {
+    grid-template-columns: 1fr;
+  }
+}
